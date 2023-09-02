@@ -1,0 +1,18 @@
+import clientes.*
+import remiseras.*
+import cooperativa.*
+
+test "Juana elegida para hacerle viaje a Ana Maria estable" {
+	oficina.asignarRemiseras(roxana,juana)
+	assert.equals(juana,oficina.remiseraElegidaParaViaje(anaMaria,10))
+}
+
+test "Roxana elegida para hacerle viaje a Teresa de 10 km" {
+	oficina.asignarRemiseras(roxana,juana)
+	assert.equals(roxana,oficina.remiseraElegidaParaViaje(teresa,10))
+}
+
+test "Roxana elegida para hacerle viaje a Teresa de 4 km" {
+	oficina.asignarRemiseras(roxana,juana)
+	assert.equals(roxana,oficina.remiseraElegidaParaViaje(teresa,4))
+}

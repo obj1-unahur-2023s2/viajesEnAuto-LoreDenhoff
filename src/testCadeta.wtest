@@ -1,0 +1,34 @@
+import remiseras.*
+import clientes.*
+
+
+
+test "Lucia reemplaza a Mariela viaje 10km" {
+	lucia.reemplaza(mariela)
+		assert.equals(180,lucia.precioViaje(ludmila,10))
+}
+
+test "Melina trabaja para Ludmila y Mariela hace viaje de 10 km"{
+	melina.clienta(ludmila)
+		assert.equals(150,mariela.precioViaje(melina,10))
+}
+
+test "Lucia reemplaza a mariela viaje 1km" {
+	lucia.reemplaza(mariela)
+		assert.equals(50,lucia.precioViaje(ludmila,1))
+}
+
+test "Melina trabaja para Ludmila y Mariela hace viaje de 1km"{
+	melina.clienta(ludmila)
+		assert.equals(50,mariela.precioViaje(melina,1))
+}
+
+test "Lucia reemplaza a Gabriela viaje 10km" {
+	lucia.reemplaza(gabriela)
+		assert.equals(216,lucia.precioViaje(ludmila,10))
+}
+
+test "Lucia reemplaza a Gabriela viaje 1km" {
+	lucia.reemplaza(gabriela)
+		assert.equals(21.6,lucia.precioViaje(ludmila,1))
+}
